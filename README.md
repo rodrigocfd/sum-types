@@ -49,6 +49,34 @@ nameOrAge.Match(
 
 For sum type structs with more fields, the logic is the same: `st3` exposes functions `New0()`, `New1()` and `New2()`, and so on.
 
+## Optional example
+
+Let's create an optional string:
+
+```go
+maybeName := opt.Some[string]("John")
+```
+
+Attempting to retrieve the value:
+
+```go
+if name, ok := maybeName.Get(); ok {
+    fmt.Printf("Name is %s.\n", name)
+} else {
+    fmt.Println("No name.")
+}
+```
+
+Reassigning to an empty value, and checking it:
+
+```go
+maybeName = opt.None[string]()
+
+if !maybeName.IsSome() {
+    fmt.Println("No name.")
+}
+```
+
 ## License
 
 Licensed under [MIT license](https://opensource.org/licenses/MIT), see [LICENSE.md](LICENSE.md) for details.
