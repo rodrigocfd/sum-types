@@ -1,10 +1,14 @@
-# Sum types
+# Sum Types
 
 This library is an attempt to emulate [sum types](https://en.wikipedia.org/wiki/Algebraic_data_type) using [Go generics](https://go.dev/doc/tutorial/generics).
 
-The package `st2` exposes a sum type for 2 types, the `st3` for 3 types.
+| Package | Description |
+| -- | -- |
+| `opt.Optional` | Optional type. |
+| `st2.SumType2` | Sum type for 2 types. |
+| `st3.SumType3` | Sum type for 3 types. |
 
-## Example
+## Sum type example
 
 Let's create a sum type variable which can hold an `int` or a `string`. In such case, `int` will be our type 0, and `string` will be our type 1. To initialize the variable with a `string` value, which is our type 1, we call the `New1()` function:
 
