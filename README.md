@@ -1,5 +1,7 @@
 # Sum Types
 
+⚠️ **Note: This project is purely experimental, and it's currently archived.**
+
 This library is an attempt to emulate [sum types](https://en.wikipedia.org/wiki/Algebraic_data_type) using [Go generics](https://go.dev/doc/tutorial/generics).
 
 | Package | Description |
